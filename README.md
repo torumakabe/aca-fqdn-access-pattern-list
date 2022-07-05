@@ -6,6 +6,8 @@
     * [External](./custom-vnet-external/overview.md)
     * [Internal](./custom-vnet-internal/overview.md)
 
+Terraform HCL codes for are put in all folders.
+
 ## Access Pattern (All)
 
 | VNet    | Accessibility Level | Ingress external | Source                 | Target FQDN                                                                 | Resolved Target IP         |
