@@ -86,7 +86,6 @@ resource "azurerm_subnet" "aca_pls" {
   resource_group_name                           = azurerm_resource_group.aca_poc.name
   virtual_network_name                          = azurerm_virtual_network.aca.name
   address_prefixes                              = [module.aca_vnet_subnet_addrs.network_cidr_blocks["pls"]]
-  enforce_private_link_service_network_policies = true
 }
 
 // TODO: This will be replaced with AzureRM provider once it supports ACA
@@ -415,7 +414,6 @@ resource "azurerm_subnet" "other_default" {
   resource_group_name                            = azurerm_resource_group.aca_poc_other.name
   virtual_network_name                           = azurerm_virtual_network.other.name
   address_prefixes                               = [module.other_vnet_subnet_addrs.network_cidr_blocks["default"]]
-  enforce_private_link_endpoint_network_policies = true
 }
 
 resource "azurerm_private_endpoint" "aca" {
